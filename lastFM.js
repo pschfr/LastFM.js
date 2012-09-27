@@ -5,7 +5,7 @@ $(document).ready(function()) {
 	$.ajax({
 		type: "GET",
 		/* Get this from the last.fm API */
-		url: "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=yeppaul&api_key=61d9a12fccfc085e5ddc70beccdbeaae&limit=5",
+		url: "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=paul_r_schaefer&api_key=b25b959554ed76058ac220b7b2e0a026&limit=3",
 		dataType: "xml",
 		success: showListens
 	});

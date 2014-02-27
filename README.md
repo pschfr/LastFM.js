@@ -5,3 +5,5 @@
 5. Done. Go enjoy some tunes.
 
 I'm available for questions at [@pschfr](http://twitter.com/pschfr).
+
+It now auto-refreshes! :D

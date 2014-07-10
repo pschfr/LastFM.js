@@ -8,3 +8,4 @@ function listens() {
 listens();
 setInterval(listens, 2000);
 // 2000 is the number of milliseconds you want it to wait before refreshing
+// I don't know what's up with Last.fm's servers, sometimes this will fail and throw an error, but it should refresh and work anyways

@@ -1,11 +1,14 @@
-// Be sure to replace [USERNAME] and [API]
+// Replace user and key with your own. Or use mine, it's up to you.
 function listens() {
-	$.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=[USERNAME]&api_key=[API]&format=json', function(data) {
-		var song = $(".song"), artistVal = data.recenttracks.track[0].artist["#text"], trackVal = data.recenttracks.track[0].name, urlVal = data.recenttracks.track[0].url;
-		song.html("<a href='" + urlVal + "' target='_blank'>" + artistVal + " \u2014 " + trackVal + "</a>");
+	var user = 'paul_r_schaefer', key = '0f680404e39c821cac34008cc4d803db';
+	$.getJSON('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + user + '&api_key=' + key + '&format=json', function(data) {
+		$(".song").html(data.recenttracks.track[0].artist["#text"] + " \u2014 " + data.recenttracks.track[0].name);
 	});
 }
-listens();
-setInterval(listens, 2000);
-// 2000 is the number of milliseconds you want it to wait before refreshing
-// I don't know what's up with Last.fm's servers, sometimes this will fail and throw an error, but it should refresh and work anyways
+$(document).ready(function(){
+	// do the rest of your page functionality here
+}).bind("loaded", function(){
+	listens();
+	setInterval(listens, 2000);
+	// 2000 is how many milliseconds between refresh
+});

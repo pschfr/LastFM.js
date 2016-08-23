@@ -20,5 +20,4 @@ function lastFM_request() {
 	};
 	xmlhttp.send(null);
 }
-lastFM_request();
 setInterval(lastFM_request(), 30000);

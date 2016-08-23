@@ -16,8 +16,9 @@ function lastFM_request() {
 					console.log(obj.recenttracks.track[i]);
 					var artistName = obj.recenttracks.track[i].artist['\#text'];
 					var songName   = obj.recenttracks.track[i].name;
-					var lastFM = document.getElementById('lastFM');
-					lastFM.innerHTML = lastFM.innerHTML + artistName + ' - ' + songName + '<br>';
+					var songURL    = obj.recenttracks.track[i].url;
+
+					document.getElementById('lastFM').innerHTML += '<a href="' + songURL + '" target="_blank">' + artistName + ' - ' + songName + '</a><br>';
 				}
 	         }
 	    }

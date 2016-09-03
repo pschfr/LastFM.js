@@ -1,5 +1,5 @@
 # lastFM.js
-Uses JavaScript to fetch the most recently listened to tracks that I scrobble from [Last.FM])(http://www.last.fm/)
+Uses JavaScript to fetch the most recently listened to tracks that I scrobble from [Last.FM](http://www.last.fm/)
 
 1. Get an API key from [Last.fm](http://www.last.fm/api/account/create).
 3. Put the API key and your username in lastFM.js.

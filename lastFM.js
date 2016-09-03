@@ -15,7 +15,8 @@ function lastFM_request() {
 
 				for (i = 0; i < number; i++) {	// Loop through responses
 					// references this specific track
-					var track = obj.recenttracks.track[i];
+					var track   = obj.recenttracks.track[i];
+					var element = document.getElementById('lastFM');
 
 					console.log(track);
 
@@ -26,11 +27,19 @@ function lastFM_request() {
 					var songURL    = track.url;
 					var imgURL     = track.image[0]['\#text']; // Image sizes go from 0 - 3
 
+					if (track['\@attr']) // if attribute that holds now playing exists
+						var nowPlaying = track['\@attr'].nowplaying;
+
 					if (imgURL != '') // if imgURL exists, print image
-						document.getElementById('lastFM').innerHTML += '<img src="' + imgURL + '" alt="' + albumName + '" title="' + albumName + '"/> ';
+						element.innerHTML += '<img src="' + imgURL + '" alt="' + albumName + '" title="' + albumName + '"/> ';
 
 					// prints link to song with artist and song name
-					document.getElementById('lastFM').innerHTML += '<a href="' + songURL + '" target="_blank">' + artistName + ' - ' + songName + '</a><br>';
+					element.innerHTML += '<a href="' + songURL + '" target="_blank">' + artistName + ' - ' + songName + '</a> ';
+
+					if (track['\@attr'] && nowPlaying != '') // if attribute exists, and is now playing, print now playing gif
+						element.innerHTML += '<img src="scrobbling.gif" alt="Now Playing" title="Now Playing" />';
+
+					element.innerHTML += '<br>';
 				}
 	         }
 	    }

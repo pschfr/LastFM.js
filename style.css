@@ -1,12 +1,7 @@
 @charset utf-8;
 body {
-	margin: 0;
-	overflow: hidden;
-	text-align: center;
 	font: 24px/2 sans-serif;
+	text-align: center;
+	margin: 0;
 }
 a { color: inherit; }
-#lastFM {
-	height: 100vh;
-	padding-top: 30vh;
-}

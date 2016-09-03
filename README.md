@@ -1,8 +1,11 @@
+# lastFM.js
+Uses JavaScript to fetch the most recently listened to tracks that I scrobble from [Last.FM])(http://www.last.fm/)
+
 1. Get an API key from [Last.fm](http://www.last.fm/api/account/create).
 3. Put the API key and your username in lastFM.js.
 4. Place a `<span id="lastFM"></span>` wherever in your HTML.
 5. Done. Go enjoy some tunes.
 
-It even auto-refreshes! :D
-
-I'm available for questions at [@pschfr](http://twitter.com/pschfr).
+# TODO:
+1. display more [methods](http://www.last.fm/api)
+2. fix duplicate track problem

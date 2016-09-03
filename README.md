@@ -9,3 +9,4 @@ Uses JavaScript to fetch the most recently listened to tracks that I scrobble fr
 # TODO:
 1. display more [methods](http://www.last.fm/api)
 2. fix duplicate track problem
+3. auto-refresh doesn't seem to work right?

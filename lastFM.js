@@ -4,6 +4,7 @@ function lastFM_request() {
 	var API_key   = '0f680404e39c821cac34008cc4d803db';
 	var number    = '10'; // Increase this to increase number of tracks
 	var lastFMurl = 'https://ws.audioscrobbler.com/2.0/?method=' + method + '&user=' + username + '&api_key=' + API_key + '&format=json';
+	var element   = document.getElementById('lastFM');
 	var xmlhttp   = new XMLHttpRequest();
 
 	xmlhttp.open('GET', lastFMurl, true); // begins request to Last.FM
@@ -12,12 +13,13 @@ function lastFM_request() {
 	    if (xmlhttp.readyState == 4) {			// When Last.FM is ready,
 	        if(xmlhttp.status == 200) {			// And we have text,
 	            var obj = JSON.parse(xmlhttp.responseText);
+				console.log(obj);
+
+				var total = obj.recenttracks['\@attr'].total;
+				element.innerHTML += '<strong>' + total + '</strong> tracks total<br><br>';
 
 				for (i = 0; i < number; i++) {	// Loop through responses
-					// references this specific track
-					var track   = obj.recenttracks.track[i];
-					var element = document.getElementById('lastFM');
-
+					var track   = obj.recenttracks.track[i]; // references this specific track
 					console.log(track);
 
 					// fetches data from track

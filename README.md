@@ -1,4 +1,4 @@
-# lastFM.js
+# [lastFM.js](https://pschfr.github.io/LastFM.js)
 Uses JavaScript to fetch the most recently listened to tracks that I scrobble from [Last.FM](http://www.last.fm/)
 
 1. Get an API key from [Last.FM](http://www.last.fm/api/account/create).
@@ -6,7 +6,7 @@ Uses JavaScript to fetch the most recently listened to tracks that I scrobble fr
 4. Place a `<div id="lastFM"></div>` wherever in your HTML.
 5. Done. Go enjoy some tunes.
 
-# TODO:
+### TODO:
 1. display more [methods](http://www.last.fm/api)
 2. fix duplicate track problem
 3. auto-refresh doesn't seem to work right?

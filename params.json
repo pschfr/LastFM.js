@@ -1,6 +1,0 @@
-{
-  "name": "Lastfm.js",
-  "tagline": "Displays the last song you scrobbled on Last.FM on a webpage",
-  "body": "# [lastFM.js](https://pschfr.github.io/LastFM.js)\r\nUses JavaScript to fetch the most recently listened to tracks that I scrobble from [Last.FM](http://www.last.fm/)\r\n\r\n1. Get an API key from [Last.FM](http://www.last.fm/api/account/create).\r\n3. Put the API key and your username in lastFM.js.\r\n4. Place a `<div id=\"lastFM\"></div>` wherever in your HTML.\r\n5. Done. Go enjoy some tunes.\r\n\r\n### TODO:\r\n1. display more [methods](http://www.last.fm/api)\r\n2. fix duplicate track problem\r\n3. auto-refresh doesn't seem to work right?\r\n",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
